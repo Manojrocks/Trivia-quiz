@@ -1,0 +1,130 @@
+.App{
+    height:100vh;
+    display:flex;
+    background-color: #020465;
+    color:whitesmoke;
+}
+.main{
+    width:75%;
+    background: linear-gradient(to bottom,rgba(123,47,196,0),#020465),
+    url("./Assests/kbc.jpg") center;
+    display: flex;
+    flex-direction: column;
+}
+.pyramid{
+    width:25%;
+    background-color: #039478;
+    display: flex; align-items: center;
+    justify-content: center;
+}
+.moneyList{
+    list-style: none;
+    width:93%;
+    padding:22px;
+}
+.moneyListItem{
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    padding: 4.6px;
+}
+.moneyListItem.active{
+    background-color: yellow;
+}
+.moneyListNumber{
+    width: 30%;
+    font-size: 20px;
+    font-weight: 200;
+}
+.moneyListAmnt{
+    font-size: 20px;
+    font-weight: 300;
+}
+.top{
+    height: 50%;
+    position: relative;
+}
+.timer{
+    width:65px;
+    height: 65px;
+    border-radius: 60%;
+    border: 5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom:10px;
+    left:78px;
+    font-size: 31px;
+    font-weight: 700;
+}
+.bottom{
+    height: 50%;
+}
+.trivia{
+    height:100%;
+    align-items: center;
+    justify-content: space-around;
+    display:flex;
+    flex-direction: column;
+}
+.question{
+    width:82%;
+    background: linear-gradient(#100345,black);
+    text-align: center;
+    padding: 21px;
+    border:2px solid green;
+    border-radius: 11px;
+    font-size:  21px;
+}
+.answers{
+ width: 100%;
+ display: flex; justify-content: center;
+ flex-wrap: wrap;
+}
+.answer{
+    width:43%;
+    padding:10px;
+    margin:0 10px 20px 10px;
+    text-align: center;
+    border-radius: 15px;
+    border:1px solid white;
+    background: linear-gradient(#0e0456,#22052d);
+    font-weight: 300; font-size: 22px;
+    cursor:pointer;
+}
+.answer:hover,
+.answer.active{
+    background:mediumorchid;
+}
+.answer.correct{
+    animation:correct 4s ease forwards;
+}
+
+@keyframes correct{
+    0%,22%,46%{
+        background:mediumorchid;
+    }
+    20%,40%,61%{
+        background: linear-gradient(#0e0456,#220523);
+    }
+    62%,100%{
+        background: green;
+    }
+}
+
+.answer.wrong{
+    animation:wrong 4s ease forwards;
+}
+
+@keyframes wrong{
+    0%,22%,46%{
+        background:mediumorchid;
+    }
+    20%,40%,61%{
+        background: linear-gradient(#0e0456,#220523);
+    }
+    62%,100%{
+        background:red;
+    }
+}
